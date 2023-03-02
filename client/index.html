@@ -4,19 +4,42 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Codex - Your Coding AI</title>
+    <title>LinguiCode - AI Coding Companion</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div id="app">
-      <div id="chat_container"></div>
-
-      <form>
-        <textarea name="prompt" rows="1" placeholder="Ask Codex..."></textarea>
-        <button type="submit"><img src="assets/send.svg" /></button>
-      </form>
+    <div id="language-selector">
+      <select id="language">
+        <option value="en">English</option>
+        <option value="sin">Sinhala</option>
+      </select>
+    </div>
+    
+    <div id="lesson-selector">
+      <select id="lesson">
+        <option value="">Select a Lesson</option>
+        <option value="Hello, World!">"Hello, World!"</option>
+        <option value="Simple Calculator">Simple Calculator</option>
+        <option value="Guess the Number">Guess the Number</option>
+        <option value="Array Statistics">Array Statistics</option>
+        <option value="Conway's Game of Life">Conway's Game of Life</option>
+      </select>
     </div>
 
-    <script type="module" src="script.js"></script>
+    <div id="lesson-container" style="display: none;">
+      <p></p>
+    </div>
+
+    <div id="chat-app" style="display: none;">
+      <div id="chat-container"></div>
+
+        <form>
+          <textarea name="prompt" rows="1" placeholder="Ask LinguiCode..."></textarea>
+          <button type="submit"><img src="assets/send.svg" /></button>
+        </form>
+    </div>
+
+    <script type="module" src="./script.js"></script>
   </body>
 </html>
+
